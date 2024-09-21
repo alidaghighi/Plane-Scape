@@ -7,9 +7,7 @@ function App() {
     document.title = 'Plane Scape';
   }, []);
   return (
-    <>
       <Home />
-    </>
   )
 }
 
