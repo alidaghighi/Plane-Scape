@@ -1,6 +1,6 @@
-import { useEffect } from 'react'
+import { useEffect } from 'react';
 import Home from './pages/Home';
-import './App.css'
+import './App.css';
 
 function App() {
   useEffect(() => {

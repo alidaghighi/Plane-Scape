@@ -26,11 +26,11 @@ const FlightCard = () => {
       </div>
       <div className="flex justify-between items-center">
         <div className="mt-4">
-          <a className="text-purple-600" href="#">
+          <a className="text-violet-900" href="#">
             Check the details
           </a>
         </div>
-        <button className="bg-purple-600 text-white px-6 py-3 rounded-lg">
+        <button className="bg-violet-900 text-white px-6 py-3 rounded-lg">
           Book Flight
         </button>
       </div>
