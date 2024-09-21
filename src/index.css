@@ -34,8 +34,6 @@ body {
   display: flex;
   place-items: center;
   background-color: rgb(243 244 246);
-  /* width: 100vw; */
-  /* height: 100vh; */
 }
 
 @media (prefers-color-scheme: light) {
