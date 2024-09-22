@@ -7,15 +7,15 @@ const Header = () => {
       </div>
       <nav className="flex items-center space-x-10">
         <div className="space-x-2">
-        <i className="fa fa-tag text-violet-900" />
+        <i className="fa-solid fa-ticket-simple text-violet-900" />
         <a href="#" className="text-gray-600">
-          Deals
+          Book a Flight
         </a>
         </div>
         <div className="space-x-2">
-        <i className="fa fa-globe text-violet-900" />
+        <i className="fa-solid fa-plane-up text-violet-900" />
         <a href="#" className="text-gray-600">
-          Discover
+          My Flights
         </a>
         </div>
         <div className="flex items-center space-x-2">
