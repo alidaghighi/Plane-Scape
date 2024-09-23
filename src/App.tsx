@@ -13,8 +13,6 @@ function App() {
     <BrowserRouter>
       <div className="mt-5">
         <Header />
-        {/* <Booking /> */}
-        {/* <MyFlights /> */}
         <Router />
       </div>
     </BrowserRouter>

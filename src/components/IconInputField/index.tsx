@@ -17,10 +17,9 @@ const IconInputField = ({
     iconClassName = '', 
     inputClassName = '',
     iconLeft = true,
-    datePicker = false
 
 }: IIconInputField) => {
-    console.log(datePicker);
+
     return (   
         <div className={className}>
             {iconLeft && <i className={icon + ' ' + iconClassName} />}
