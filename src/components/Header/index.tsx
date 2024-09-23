@@ -8,13 +8,13 @@ const Header = () => {
       <nav className="flex items-center space-x-10">
         <div className="space-x-2">
         <i className="fa-solid fa-ticket-simple text-violet-900" />
-        <a href="#" className="text-gray-600">
+        <a href="/" className="text-gray-600">
           Book a Flight
         </a>
         </div>
         <div className="space-x-2">
         <i className="fa-solid fa-plane-up text-violet-900" />
-        <a href="#" className="text-gray-600">
+        <a href="/MyFlights" className="text-gray-600">
           My Flights
         </a>
         </div>

@@ -1,14 +1,24 @@
-import { useEffect } from 'react';
-import Home from './pages/Home';
-import './App.css';
+import { useEffect } from "react";
+
+import "./App.css";
+import Router from "./components/router";
+import Header from "./components/Header";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   useEffect(() => {
-    document.title = 'Plane Scape';
+    document.title = "Plane Scape";
   }, []);
   return (
-      <Home />
-  )
+    <BrowserRouter>
+      <div className="mt-5">
+        <Header />
+        {/* <Booking /> */}
+        {/* <MyFlights /> */}
+        <Router />
+      </div>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

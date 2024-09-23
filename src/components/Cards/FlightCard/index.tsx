@@ -44,7 +44,7 @@ const FlightCard = () => {
       </div>
       <button
         className="
-          w-1/4 flex justify-center items-center bg-violet-300 text-violet-900
+          w-1/4 flex justify-center items-center bg-violet-100 text-violet-900
           p-3 rounded-b-lg text-sm transition ease-in-out duration-100
         hover:bg-violet-500 hover:shadow-md hover:text-violet-50
         active:bg-violet-600"
