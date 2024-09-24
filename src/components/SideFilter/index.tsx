@@ -13,7 +13,7 @@ const SideFilter = () => {
         <div className="relative">
           <select
             className={clsx(
-              'w-full border rounded-lg p-2 appearance-none',
+              'w-full border rounded-lg p-2 pr-6 appearance-none truncate',
               'focus:outline-none data-[focus]:outline-1 data-[focus]:-outline-offset-1 data-[focus]:outline-white/25',
               // Make the text of each option black on Windows
               '*:text-black'
@@ -25,7 +25,7 @@ const SideFilter = () => {
             <option value="L">Latest Time</option>
           </select>
           <i
-            className="fa fa-chevron-down group pointer-events-none absolute top-3 right-2.5 size-4 text-violet-900"
+            className="fa fa-chevron-down group pointer-events-none absolute top-3 right-2.5 size-4 text-violet-900 ml-2"
             aria-hidden="true"
           />
         </div>

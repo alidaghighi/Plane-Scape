@@ -1,14 +1,22 @@
+import FlightCard from "../../components/Cards/FlightCard";
 import SideCard from "../../components/Cards/SideCard";
-import Spinner from "../../components/Spinner";
+// import Spinner from "../../components/Spinner";
 
 const MyFlights = () => {
   return (
     <main className="grid grid-cols-1 lg:grid-cols-3 gap-10">
       <section className="lg:col-span-3">
-        <div className="flex items-center justify-center mt-96 w-full lg:w-[45vw]">
-          <Spinner />
-        </div>
-      </section>
+          <section className="flex justify-between">
+            <div className="lg:w-full space-y-10 overflow-y-scroll overflow-x-hidden lg:max-h-[86vh] pr-2">
+              <FlightCard reserved />
+              <FlightCard reserved/>
+              <FlightCard reserved/>
+              <FlightCard reserved/>
+              <FlightCard reserved/>
+              <FlightCard reserved/>
+            </div>
+          </section>
+        </section>
       <aside className="lg:-col-start-1">
         <div className="space-y-7">
           <SideCard

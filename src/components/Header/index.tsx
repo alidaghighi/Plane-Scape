@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <header className="flex justify-between items-center mb-6">
+    <header className="flex justify-between items-center mb-6 w-full lg:w-[63.5vw]">
       <div className="flex items-center">
         <i className="fas fa-plane-departure text-violet-900 text-2xl mr-2"></i>
         <h1 className="text-xl font-bold">PLANE SCAPE</h1>
@@ -24,7 +24,7 @@ const Header = () => {
             alt="User profile picture"
             className="rounded-full"
           />
-          <span className="text-gray-600">Joane Smith</span>
+          <span className="text-gray-600">User</span>
         </div>
       </nav>
     </header>

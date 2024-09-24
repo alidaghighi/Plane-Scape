@@ -1,4 +1,8 @@
-const FlightCard = () => {
+interface IFlightCard {
+  reserved?: boolean;
+}
+
+const FlightCard = ({ reserved = false }: IFlightCard) => {
   return (
     <div>
       <div className="bg-white p-6 rounded-lg shadow-sm relative">
@@ -32,25 +36,29 @@ const FlightCard = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-end items-center mt-20">
-          <button
-            className="h-16 absolute bottom-0 right-0 transition ease-in-out duration-100 
+        {!reserved && (
+          <div className="flex justify-end items-center mt-20">
+            <button
+              className="h-16 absolute bottom-0 right-0 transition ease-in-out duration-100 
             bg-violet-900 text-white px-6 py-3 rounded-tl-lg rounded-br-lg 
             hover:bg-violet-600 hover:shadow-md active:bg-violet-700"
-          >
-            Book Flight
-          </button>
-        </div>
+            >
+              Book Flight
+            </button>
+          </div>
+        )}
       </div>
-      <button
-        className="
+      {!reserved && (
+        <button
+          className="
           w-1/4 flex justify-center items-center bg-violet-100 text-violet-900
           p-3 rounded-b-lg text-sm transition ease-in-out duration-100
         hover:bg-violet-500 hover:shadow-md hover:text-violet-50
         active:bg-violet-600"
-      >
-        Check the details
-      </button>
+        >
+          Check the details
+        </button>
+      )}
     </div>
   );
 };

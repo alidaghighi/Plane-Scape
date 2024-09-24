@@ -13,6 +13,11 @@ const routes = [
     path: "/MyFlights",
     element: <MyFlights />,
   },
+  {
+    key: "*",
+    path: "*",
+    element: <Booking />,
+  },
 ];
 
 const Router = () => {
