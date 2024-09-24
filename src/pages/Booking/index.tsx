@@ -2,8 +2,58 @@ import FlightCard from "../../components/Cards/FlightCard";
 import SideCard from "../../components/Cards/SideCard";
 import SideFilter from "../../components/SideFilter";
 import BookingPanel from "../../components/BookingPanel";
+import { instance } from "../../api";
+import axios from 'axios';
+import { useEffect, useState } from "react";
 
 const Booking = () => {
+  const [sort, setSort] = useState("+scheduleTime");
+  const [page, setPage] = useState(0);
+  const [fromDateTime, setFromDateTime] = useState("2024-01-01T00:00:00");
+  const [toDateTime, setToDateTime] = useState("2024-01-02T00:00:00");
+  
+  // curl -X GET --header "Accept: application/json" --header "app_id: 59790048" --header "app_key: daf451acbc820d87d1e9bf7d57618f82" --header "ResourceVersion: v4" "https://api.schiphol.nl/public-flights/flights?flightDirection=A&includedelays=true&page=0&sort=%2BscheduleTime&fromDateTime=2024-01-01T00%3A00%3A00&toDateTime=2024-01-02T00%3A00%3A00"
+
+
+  useEffect(() => {
+    // instance
+    //   .get(
+    //     // `/flights?flightDirection=A&includedelays=true&page=${page}&sort=${sort}&fromDateTime=${fromDateTime}&toDateTime=${toDateTime}`
+    //     "https://api.schiphol.nl/public-flights/flights?flightDirection=A&includedelays=true&page=0&sort=%2BscheduleTime&fromDateTime=2024-01-01T00%3A00%3A00&toDateTime=2024-01-02T00%3A00%3A00"
+    //   )
+    //   .then((response) => {
+    //     console.log(response.data);
+    //   })
+    //   .catch((error) => {
+    //     console.error(error);
+    //   });
+    
+
+axios.get('https://api.schiphol.nl/public-flights/flights', {
+  params: {
+    flightDirection: 'A',
+    includedelays: true,
+    page: 0,
+    sort: '+scheduleTime',
+    fromDateTime: '2024-01-01T00:00:00',
+    toDateTime: '2024-01-02T00:00:00'
+  },
+  headers: {
+    Accept: 'application/json',
+    app_id: '59790048',
+    app_key: 'daf451acbc820d87d1e9bf7d57618f82',
+    ResourceVersion: 'v4'
+  }
+})
+.then(response => {
+  console.log(response.data);
+})
+.catch(error => {
+  console.error(error);
+});
+    
+  }, [sort, page, fromDateTime, toDateTime]);
+
   return (
     <>
       <main className="grid grid-cols-1 lg:grid-cols-3 gap-10">
